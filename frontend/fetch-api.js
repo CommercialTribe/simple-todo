@@ -1,16 +1,16 @@
 export default class FetchApi {
-  static get(path) {
-    return fetch(path, {
-      method: 'GET',
-      headers: { 'Content-Type': 'application/json' },
-    }).then((response) => response.json());
-  }
-
   static delete(path) {
     return fetch(path, {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
     });
+  }
+
+  static get(path) {
+    return fetch(path, {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' },
+    }).then((response) => response.json());
   }
 
   static post(path, body) {
